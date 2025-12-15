@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Форма заказа</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="password"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        select {
+            width: 100%;
+        }
+        .radio-group {
+            margin-top: 10px;
+        }
+        .radio-group label {
+            font-weight: normal;
+            margin-right: 15px;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Форма заказа</h1>
+    <form action="#" method="post">
+        <label for="surname">Фамилия:</label>
+        <input type="text" id="surname" name="surname" required />
+
+        <label for="initials">Инициалы:</label>
+        <input type="text" id="initials" name="initials" required />
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required />
+
+        <label for="address">Адрес получателя:</label>
+        <input type="text" id="address" name="address" required />
+
+        <label for="type">Тип:</label>
+        <select id="type" name="type" required>
+            <option value="куриные">Куриные</option>
+            <option value="перепелиные">Перепелиные</option>
+            <option value="гусиные">Гусиные</option>
+        </select>
+
+        <label>Доставка:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="delivery" value="почтой" required /> Почтой</label>
+            <label><input type="radio" name="delivery" value="электронно" /> Электронно</label>
+            <label><input type="radio" name="delivery" value="курьером" /> Курьером</label>
+        </div>
+
+        <label for="additional">Дополнительная информация:</label>
+        <textarea id="additional" name="additional"></textarea>
+
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
